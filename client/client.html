@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>koa-cros-demo</title>
+<link rel="stylesheet" href="./style.css">
+<script src="./ajax.js"></script>
+</head>
+<body>
+<div>
+  <table></table>
+<div>
+<script>
+//密码换取token
+var posttoken = "http://localhost:3000/api/authenticate"
+var getallcities = "http://localhost:3000/api/cities"
+Ajax.post(posttoken, {}, {password:"password"})
+    .then(res =>{
+       //console.log(res.token)
+       sessionStorage.setItem("token", res.token);
+     }).catch(err => console.log(err))
+//token获取cities
+//console.log(sessionStorage.getItem("token"));
+Ajax.get(getallcities, {token:sessionStorage.getItem("token")}, {})
+   .then(res =>{
+      console.log(res)
+    }).catch(err => console.log(err))
+</script>
+</body>
+</html>
