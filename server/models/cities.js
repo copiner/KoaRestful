@@ -26,7 +26,10 @@ const citySchema = new Schema({
   }
 });
 
-export default mongoose.model('City', citySchema);
+export default mongoose.model('City', citySchema,'somecities');
+
+//mongoose.model(name,[schema],[collection],[skipInit]) //model方法参数，如果不加第三个参数，就会取第一个参数+"s"作为数据库中collection的名字
+//查看官方文档。了解各个api用法!!!
 
 //mongodb
 // {

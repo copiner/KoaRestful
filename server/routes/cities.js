@@ -8,16 +8,16 @@ const api = 'cities';
 
 const router = new Router();
 //console.log(jwt)
-router.prefix(`/${baseApi}/${api}`);
+router.prefix(`/${baseApi}/${api}`); //  /api/cities
 
 // GET /api/cities
-router.get('/', jwt, CitiesControllers.find);
+router.get('/', CitiesControllers.find);
 
 // POST /api/cities
 // This route is protected, call POST /api/authenticate to get the token
-router.post('/', jwt, CitiesControllers.add);
+router.post('/', CitiesControllers.add);
 
-// GET /api/cities/id    5a90f1e1b07de402d8f0811b
+// GET /api/cities/id
 // This route is protected, call POST /api/authenticate to get the token
 router.get('/:id', jwt, CitiesControllers.findById);
 
