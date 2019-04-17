@@ -12,10 +12,6 @@
     "semi": [0, "always"],
     "no-console": 0,
     "class-methods-use-this": 0,
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
     "no-param-reassign" : 0
    }
 }
