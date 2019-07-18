@@ -1,3 +1,9 @@
+/*
+Compile the entire src directory and output it to the lib directory by using either --out-dir or -d. This doesn't overwrite any other files or directories in lib.
+
+"build": "babel server -d dist",
+*/
+
 import bodyParser from 'koa-bodyparser';
 import Koa from 'koa';
 import logger from 'koa-logger';
