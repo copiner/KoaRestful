@@ -1,4 +1,6 @@
-import mongoose from 'mongoose';
+import mongoose from 'mongoose';//elegant mongodb object modeling for node.js
+
+//note:  mongodb -- The official MongoDB driver for Node.js
 
 // schema
 const { Schema } = mongoose;
