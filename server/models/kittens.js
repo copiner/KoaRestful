@@ -46,10 +46,6 @@ var fluffy = new Kitten({ name: 'fluffy' });
 //   fluffy.speak();
 // });
 
-fluffy.findSimilarTypes(function(err, kit) {
-  //console.log(kit); // woof
-});
-
 Kitten.find(function (err, kittens) {
   if (err) return console.error(err);
   //console.log(kittens);
@@ -61,6 +57,14 @@ Kitten.find({ name: /^sile/ }, function(err, kittens){
 });
 
 
+/*------------methods-------------------*/
+
+fluffy.findSimilarTypes(function(err, kit) {
+  //console.log(kit); // woof
+});
+
+
+/*------------statics-------------------*/
 let animal = async () => {
   return await Kitten.findByName('fluffy');
 }
@@ -70,7 +74,7 @@ animal().then((v)=>{
 }).catch((e)=>{
   console.log(e)
 })
-
+/*------------query-------------------*/
 Kitten.find().byName('fido').exec(function(err, animals) {
   console.log(animals);
 });
