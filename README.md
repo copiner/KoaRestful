@@ -37,6 +37,6 @@ npm run prod
 
 **Note : Please make sure your MongoDB is running before using `npm start` or `npm run prod`**
 
-## License
+## Note
 
-MIT &copy; [Thomas Blanc-Hector](https://github.com/jsnomad)
+[Thomas Blanc-Hector](https://github.com/jsnomad/koa-restful-boilerplate#readme)

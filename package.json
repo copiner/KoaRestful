@@ -2,7 +2,7 @@
   "name": "koa-restful-boilerplate",
   "description": "Koa 2 RESTful API boilerplate",
   "version": "1.0.0",
-  "author": "Thomas Blanc-Hector",
+  "author": "wrq",
   "keywords": [
     "koa",
     "rest",
@@ -12,15 +12,7 @@
     "async",
     "es7"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jsnomad/koa-restful-boilerplate.git"
-  },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jsnomad/koa-restful-boilerplate/issues"
-  },
-  "homepage": "https://github.com/jsnomad/koa-restful-boilerplate#readme",
   "main": "server/index.js",
   "scripts": {
     "start": "nodemon server/ --exec babel-node",
@@ -31,34 +23,36 @@
     "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --exit"
   },
   "dependencies": {
-    "babel-polyfill": "^6.5.0",
+    "core-js": "^3.2.1",
     "glob": "^7.1.2",
-    "jsonwebtoken": "^8.1.1",
-    "koa": "^2.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.0",
-    "koa-helmet": "^3.3.0",
-    "koa-jwt": "^3.3.0",
-    "koa-logger": "^3.1.0",
-    "koa-router": "^7.3.0",
-    "koa2-cors": "^2.0.5",
-    "mongoose": "^5.0.1"
+    "koa-helmet": "^4.0.0",
+    "koa-jwt": "^3.6.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.6.4",
+    "regenerator-runtime": "^0.13.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-syntax-async-functions": "^6.5.0",
     "babel-plugin-transform-async-to-generator": "^6.5.0",
-    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.3.13",
-    "chai": "^4.1.2",
-    "eslint": "^5.11.1",
+    "chai": "^4.2.0",
+    "eslint": "^6.0.1",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.2.0",
-    "mocha": "^5.0.1",
-    "nodemon": "^1.8.1",
-    "should": "^13.1.3",
-    "supertest": "^3.0.0"
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^2.0.1",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
   }
 }

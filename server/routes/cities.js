@@ -1,4 +1,4 @@
-import 'babel-polyfill';
+// import 'babel-polyfill';
 import Router from 'koa-router';
 import { baseApi } from '../config';
 import jwt from '../middlewares/jwt';

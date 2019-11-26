@@ -3,17 +3,15 @@ Compile the entire src directory and output it to the lib directory by using eit
 
 "build": "babel server -d dist",
 */
-
 import bodyParser from 'koa-bodyparser';
 import Koa from 'koa';
 import logger from 'koa-logger';
 import mongoose from 'mongoose';
 import helmet from 'koa-helmet';
-import cors from 'koa2-cors';
 import routing from './routes/';
-import { port, connexionString } from './config';
+import { port, monAddr } from './config';
 
-mongoose.connect(connexionString);
+mongoose.connect(monAddr,{ useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.on('open', ()=>{
 // console.log('wds');
 });
@@ -24,7 +22,6 @@ const app = new Koa();
 
 app.use(logger())
    .use(bodyParser())
-   .use(cors())
    .use(helmet());
 
 routing(app);
