@@ -1,12 +1,11 @@
-import mongoose from 'mongoose';//elegant mongodb object modeling for node.js
-
 //note:  mongodb -- The official MongoDB driver for Node.js
 
-// schema
-const { Schema } = mongoose;
+import mongoose from 'mongoose';//elegant mongodb object modeling for node.js
 
 //  To fix https://github.com/Automattic/mongoose/issues/4291
 mongoose.Promise = global.Promise;
+
+const { Schema } = mongoose;// schema
 
 //  Defining a Model
 //  Models are defined through the `Schema` interface
@@ -18,7 +17,7 @@ const citySchema = new Schema({
   },
   totalPopulation: {
     type: Number,
-    required: true
+    required: false
   },
   country: String,
   zipCode: Number,
@@ -27,6 +26,7 @@ const citySchema = new Schema({
     default: Date.now
   }
 });
+
 
 export default mongoose.model('City', citySchema,'somecities');
 

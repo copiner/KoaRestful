@@ -12,9 +12,9 @@ import routing from './routes/';
 import { port, monAddr } from './config';
 
 mongoose.connect(monAddr,{ useNewUrlParser: true, useUnifiedTopology: true});
-mongoose.connection.on('open', ()=>{
-// console.log('wds');
-});
+// mongoose.connection.on('open', ()=>{
+// // console.log('wds');
+// });
 mongoose.connection.on('error', console.error);
 
 // Create Koa Application

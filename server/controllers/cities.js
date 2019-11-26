@@ -1,6 +1,6 @@
 import City from '../models/cities';
 
-/**
+/*
 根据模型创建实体(entity)，是指的个体对象
 var cityentity = new City({
     name : "Houston",
@@ -8,7 +8,7 @@ var cityentity = new City({
     country : "American",
     zipCode : 77001
 });
-//用save 方法把自己保存到数据库中
+保存到数据库中
 cityentity.save(function(error,doc){
     if(error){
         console.log("error :" + error);
@@ -56,7 +56,7 @@ class CitiesControllers {
   async add(ctx) {
     try {
       console.log(ctx.request.body);
-      const city = await new City(ctx.request.body).save();
+      const city = await new City(ctx.request.body).save();//new City
       ctx.body = city;
     } catch (err) {
       ctx.throw(422);
