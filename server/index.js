@@ -11,11 +11,18 @@ import helmet from 'koa-helmet';
 import routing from './routes/';
 import { port, monAddr } from './config';
 
-mongoose.connect(monAddr,{ useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(monAddr, {
+  useNewUrlParser: true,
+  autoIndex: false ,
+  useCreateIndex :true,
+  useUnifiedTopology: true
+}).catch((e) => console.error(e));
+
+mongoose.connection.on('error', e => console.error(e));
+
 // mongoose.connection.on('open', ()=>{
 // // console.log('wds');
 // });
-mongoose.connection.on('error', console.error);
 
 // Create Koa Application
 const app = new Koa();

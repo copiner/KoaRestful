@@ -9,7 +9,7 @@ const kittySchema = new Schema({
   }
 });
 
-//methods
+
 // NOTE: methods must be added to the schema before compiling it with mongoose.model()
 kittySchema.methods.speak = function () {
   var greeting = this.name
@@ -18,19 +18,6 @@ kittySchema.methods.speak = function () {
   console.log(greeting);
 }//Now all of our Kitten instances have a speak method available to them.
 
-kittySchema.methods.findSimilarTypes = function(cb) {
-  return this.model('Kitten').find({ type: this.type }, cb);
-};
-
-//statics
-kittySchema.statics.findByName = function(name) {
-  return this.find({ name: new RegExp(name, 'i') });
-};
-
-//query
-kittySchema.query.byName = function(name) {
-  return this.where({ name: new RegExp(name, 'i') });
-};
 
 const Kitten = mongoose.model('Kitten', kittySchema,'somekittens');
 
@@ -54,31 +41,4 @@ Kitten.find(function (err, kittens) {
 Kitten.find({ name: /^sile/ }, function(err, kittens){
   if (err) return console.error(err);
   //console.log(kittens);
-});
-
-
-/*------------methods-------------------*/
-
-fluffy.findSimilarTypes(function(err, kit) {
-  //console.log(kit); // woof
-});
-
-
-/*------------statics-------------------*/
-let animal = async () => {
-  return await Kitten.findByName('fluffy');
-}
-
-animal().then((v)=>{
-  console.log(v)
-}).catch((e)=>{
-  console.log(e)
-})
-/*------------query-------------------*/
-Kitten.find().byName('fido').exec(function(err, animals) {
-  console.log(animals);
-});
-
-Kitten.findOne().byName('fido').exec(function(err, animal) {
-  console.log(animal);
 });

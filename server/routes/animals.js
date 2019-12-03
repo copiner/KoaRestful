@@ -2,16 +2,16 @@
 import Router from 'koa-router';
 import { baseApi } from '../config';
 import jwt from '../middlewares/jwt';
-import KittensControllers from '../controllers/kittens';
 
-const api = 'kitttens';
+import ValidatesControllers from '../controllers/validates';
 
+const api = 'validates';
 const router = new Router();
 
 router.prefix(`/${baseApi}/${api}`); //  /api/kittens
 
 // GET /api/kittens
-router.get('/', KittensControllers.find);
+router.get('/', ValidatesControllers.find);
 
 
 export default router;

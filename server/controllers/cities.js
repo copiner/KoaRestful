@@ -55,7 +55,6 @@ class CitiesControllers {
    */
   async add(ctx) {
     try {
-      console.log(ctx.request.body);
       const city = await new City(ctx.request.body).save();//new City
       ctx.body = city;
     } catch (err) {
