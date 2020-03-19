@@ -253,10 +253,11 @@ Story.find().
 Story.findOne({ title: 'Casino Royale' }, function(error, story) {
   if (error) console.error(error);
 
-  story.author = author;
+//  story.author = author;
   //console.log(story.author.name); // prints "Ian Fleming"
 });
 
+/*
 Author.findOne({ name: 'Antoine' }).
       populate('stories'). // only works if we pushed refs to children
       exec(function (err, author) {
@@ -277,6 +278,7 @@ Story.
     //console.log('The stories are an array: ', stories);
   });
 
+*/
 
 //Populating across Databases
 /*

@@ -260,14 +260,17 @@ let aAss = async () =>{
 }
 //aAss()
 
+/*
 Assignment.findOne(function (err, doc) {
 
-  doc.dueDate.setMonth(3);
-  //doc.save(); // THIS DOES NOT SAVE YOUR CHANGE
-  doc.markModified('dueDate');
-  // doc.save(); // works
+    doc.dueDate.setMonth(3);
+    doc.save(); // THIS DOES NOT SAVE YOUR CHANGE
+    doc.markModified('dueDate');
+    doc.save(); // works
 
 })
+
+*/
 
 //Buffer
 const bufferSchema = new Schema({ binData: Buffer }); // binData will be cast to a Buffer
