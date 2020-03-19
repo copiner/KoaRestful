@@ -35,6 +35,10 @@ Building and Running Production Server
 npm run prod
 ```
 
+```
+npm install --production
+```
+
 **Note : Please make sure your MongoDB is running before using `npm start` or `npm run prod`**
 
 ## Note
