@@ -20,9 +20,10 @@
     "lint": "eslint ./server",
     "test": "npm run lint && npm run mocha",
     "prod": "npm run build && node dist/",
-    "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --require babel-polyfill --exit"
+    "mocha": "./node_modules/.bin/mocha --compilers js:babel-register --exit"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "core-js": "^3.2.1",
     "glob": "^7.1.2",
     "jsonwebtoken": "^8.5.1",
