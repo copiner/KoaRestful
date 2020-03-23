@@ -10,13 +10,16 @@ export default function(dirname) {
         ignore: '**/index.js'
       },
       (err, files) => {
-        if (err) {
-          return reject(err);
-        }
-        files.forEach(file => {
-          const route = require(file); // eslint-disable-line global-require, import/no-dynamic-require
-          routes.push(route);
-        });
+          if (err) {
+              return reject(err);
+          }
+          files.forEach(file => {
+
+              console.log(file);
+              //babel-plugin-add-module-export
+              const route = require(file);
+              routes.push(route);
+          });
         return resolve(routes);
       }
     );
