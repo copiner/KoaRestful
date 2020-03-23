@@ -6,7 +6,7 @@
     node: true
   },
   parser: "babel-eslint",
-  extends: [ "airbnb/base", "prettier"],
+  extends: [ "airbnb-base/legacy", "prettier"],
   rules: {
     comma-dangle: ["error", "never"],
     semi: [0, "always"],

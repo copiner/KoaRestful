@@ -1,11 +1,19 @@
 {
-  "presets": ["@babel/env"],
+  "presets": [
+    [
+        "@babel/env",
+        {
+            "targets":{
+                "esmodules": true
+            }
+        }
+    ],
+
+    "airbnb"
+  ],
   "plugins": [
 
-             "@babel/plugin-transform-runtime",
-             "transform-async-to-generator",
-             "syntax-async-functions",
-             "add-module-exports"
+             "@babel/plugin-transform-runtime"
 
              ]
 }
