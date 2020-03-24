@@ -1,14 +1,14 @@
-import Middle from '../models/middle';
+import Kittens from '../models/kittens';
 
-class MiddleControllers {
+class KittensControllers {
   /**
    * Get all kittens
    * @param {ctx} Koa Context
    */
   async find(ctx) {
-    ctx.body = await Middle.find();
+    ctx.body = await Kittens.find();
   }
 
 }
 
-export default new MiddleControllers();//export instance
+export default new KittensControllers();//export instance

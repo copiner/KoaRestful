@@ -15,7 +15,7 @@ export default function(dirname) {
           }
           files.forEach(file => {
 
-              console.log(file);
+//              console.log(file);
               //babel-plugin-add-module-export
               const route = require(file);
               routes.push(route);

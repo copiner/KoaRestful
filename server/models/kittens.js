@@ -15,7 +15,7 @@ kittySchema.methods.speak = function () {
   var greeting = this.name
     ? "Meow name is " + this.name
     : "I don't have a name";
-  console.log(greeting);
+//  console.log(greeting);
 }//Now all of our Kitten instances have a speak method available to them.
 
 

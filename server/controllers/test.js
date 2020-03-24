@@ -14,7 +14,7 @@ async function test() {
     const v1 = await getSomething();
     const v2 = await testPromise();
     const v3 = await testAsync();
-    console.log(v1, v2, v3);
+//    console.log(v1, v2, v3);
 }
 
 test();
