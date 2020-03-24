@@ -361,5 +361,5 @@ const player = new Player({
 // })
 //console.log(player)
 Player.find().then(function(palyer){
-  console.log(palyer)
+//  console.log(palyer)
 })
